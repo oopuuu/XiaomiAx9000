@@ -1,0 +1,41 @@
+#设置宽带账号密码
+uci set network.wan.proto=pppoe
+uci set network.wan.username='057181067700'
+uci set network.wan.password='8380.5' 
+uci commit network
+#0是5Gwifi
+uci set wireless.@wifi-device[0].channel='44'
+uci set wireless.@wifi-device[0].htmode='HE160'
+uci set wireless.@wifi-device[0].legacy_rates='1'
+uci set wireless.@wifi-device[0].mu_beamformer='1'
+uci set wireless.default_radio1.ssid=Xiaomi_1803
+uci set wireless.default_radio0.ssid=Xiaomi_1803_5G
+uci set wireless.default_radio0.encryption=sae-mixed
+uci set wireless.default_radio1.encryption=sae-mixed
+uci set wireless.default_radio0.key=zp961203
+uci set wireless.default_radio1.key=zp961203
+uci commit wireless
+#设置NAT加速转发
+uci set turboacc.config=turboacc
+uci set turboacc.config.sw_flow='1'
+uci set turboacc.config.hw_flow='1'
+uci set turboacc.config.sfe_flow='1'
+uci set turboacc.config.dns_caching='0'
+uci set turboacc.config.bbr_cca='1'
+uci set turboacc.config.fullcone_nat='1'
+uci commit turboacc
+#设置VSSR
+#uci set vssr.@server_subscribe[0]=server_subscribe
+#uci set vssr.@server_subscribe[0].proxy='0'
+#uci set vssr.@server_subscribe[0].auto_update_time='2'
+#uci set vssr.@server_subscribe[0].auto_update='1'
+#uci set vssr.@server_subscribe[0].filter_words='过期时间/剩余流量'
+#uci set vssr.@server_subscribe[0].subscribe_url='https://api.cn1.info/subscription/984d108884f7c9e0cbbf50eff1b3d235.conf'
+#uci commit vssr
+#Adbyby
+uci set adbyby.@adbyby[0].enable='1'
+uci commit adbyby
+
+/etc/init.d/network restart
+
+exit 0
