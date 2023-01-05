@@ -1830,9 +1830,9 @@ CONFIG_PACKAGE_libiwinfo-data=y
 # CONFIG_PACKAGE_ipq-wifi-plasmacloud_pa2200 is not set
 # CONFIG_PACKAGE_ipq-wifi-qnap_301w is not set
 # CONFIG_PACKAGE_ipq-wifi-qxwlan_e2600ac is not set
-CONFIG_PACKAGE_ipq-wifi-redmi_ax6=y
+# CONFIG_PACKAGE_ipq-wifi-redmi_ax6 is not set
 # CONFIG_PACKAGE_ipq-wifi-xiaomi_ax3600 is not set
-# CONFIG_PACKAGE_ipq-wifi-xiaomi_ax9000 is not set
+CONFIG_PACKAGE_ipq-wifi-xiaomi_ax9000=y
 # CONFIG_PACKAGE_ipq-wifi-zte_mf269 is not set
 # end of ath10k Board-Specific Overrides
 
